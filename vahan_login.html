@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vahan Login | Ministry of Road Transport & Highways</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/src/style.css">
+    <style>
+        /* Specific overrides for the login page content if needed */
+        .login-container-section {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f4f7fb 0%, #eef4fb 100%);
+            padding: 40px 20px;
+        }
+
+        .modern-login-card {
+            background: white;
+            width: 100%;
+            max-width: 480px;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-top: 5px solid var(--primary-blue);
+        }
+
+        .modern-login-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .modern-login-header h2 {
+            font-family: var(--font-heading);
+            color: var(--dark-blue);
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .modern-login-header p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-main);
+            font-size: 0.9rem;
+        }
+
+        .input-group {
+            position: relative;
+        }
+
+        .input-group i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px 12px 45px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        .captcha-row {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .captcha-display {
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-weight: bold;
+            letter-spacing: 5px;
+            font-size: 1.2rem;
+            flex-grow: 1;
+            text-align: center;
+            color: #333;
+            text-decoration: line-through;
+        }
+
+        .login-submit-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-submit-btn:hover {
+            background-color: var(--dark-blue);
+        }
+
+        .login-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        .login-options a {
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-links">
+                <a href="#">Skip to Main Content</a> |
+                <a href="#">Screen Reader Access</a>
+            </div>
+            <div class="top-controls">
+                <span class="text-resize">
+                    <a href="#">A-</a>
+                    <a href="#">A</a>
+                    <a href="#">A+</a>
+                </span>
+                <div class="lang-select">
+                    <select>
+                        <option>English</option>
+                        <option>Hindi</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo-section">
+                <div class="emblem">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg"
+                        alt="Emblem of India">
+                </div>
+                <div class="ministry-text">
+                    <h1>Ministry of Road Transport & Highways</h1>
+                    <h2>Government of India</h2>
+                </div>
+            </div>
+            <div class="site-branding">
+                <div class="parivahan-logo">
+                    <span class="p-text">Parivahan</span>
+                    <span class="s-text">Sewa</span>
+                    <div class="sub-text">Road Transport & Highways</div>
+                </div>
+                <div class="g20-logo">
+                    <div class="g20-placeholder">G2<i class="fa-solid fa-earth-asia"></i></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="/index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Online Services</a></li>
+                <li><a href="#">Informational Services</a></li>
+                <li><a href="#">Dashboards</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li class="login-btn"><a href="#" class="active">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Login Content -->
+    <section class="login-container-section">
+        <div class="modern-login-card">
+            <div class="modern-login-header">
+                <h2>Vahan Login</h2>
+                <p>Sign in to access centralized vehicle services (Vahan 4.0)</p>
+            </div>
+
+            <form id="vahanLogin">
+                <div class="form-group">
+                    <label for="userid">User ID</label>
+                    <div class="input-group">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="userid" name="userid" placeholder="Enter User ID" required value="admin">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div style="display: flex; justify-content: space-between;">
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="input-group">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="password" name="password" placeholder="Enter Password"
+                            value="password">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="captcha">Verification Code</label>
+                    <div class="captcha-row">
+                        <div class="captcha-display">p2n3</div>
+                        <button type="button"
+                            style="background:none; border:none; cursor:pointer; color:var(--primary-blue)"><i
+                                class="fa-solid fa-rotate"></i></button>
+                    </div>
+                    <div class="input-group" style="margin-top:10px;">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <input type="text" id="captcha" name="captcha" placeholder="Enter the code showing above"
+                            required>
+                    </div>
+                </div>
+
+                <button type="submit" class="login-submit-btn">Login</button>
+
+                <div class="login-options">
+                    <span><a href="#">Forgot Password?</a></span>
+                    <span>New User? <a href="#">Register</a></span>
+                </div>
+
+                <div
+                    style="margin-top: 15px; font-size: 0.85rem; color: #666; text-align: center; background:#f9f9f9; padding:10px; border-radius:4px;">
+                    <strong>Demo Credentials:</strong><br> User: admin | Captcha: p2n3
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-links">
+                    <h4>About Parivahan</h4>
+                    <ul>
+                        <li><a href="#">About Ministry</a></li>
+                        <li><a href="#">About NIC</a></li>
+                        <li><a href="#">History</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Sitemap</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="#">Help Desk</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="nic-branding">
+                    <div class="nic-text">
+                        Designed & Developed by<br>
+                        <strong>National Informatics Centre (NIC)</strong><br>
+                        Ministry of Electronics & Information Technology
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ministry of Road Transport & Highways, Government of India.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('vahanLogin').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const uid = document.getElementById('userid').value;
+            const cap = document.getElementById('captcha').value;
+
+            if (uid === 'admin' && cap === 'p2n3') {
+                // Set Session
+                localStorage.setItem('vahanUser', uid);
+                alert('Login Successful! Redirecting to Home Page...');
+                window.location.href = '/index.html';
+            } else {
+                alert('Invalid Credentials! \nPlease use:\nUser ID: admin\nCaptcha: p2n3');
+            }
+        });
+    </script>
+</body>
+
+</html>

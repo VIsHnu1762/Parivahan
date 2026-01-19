@@ -212,16 +212,20 @@ ul {
 
 .login-btn {
   margin-left: auto;
-  background-color: var(--accent-orange);
+  /* Remove background here to avoid coloring the space behind the dropdown */
+  /* background-color: var(--accent-orange); */
+  display: flex; /* alignment */
+  align-items: center;
 }
 
-.login-btn a {
+.login-btn > a {
   background-color: var(--accent-orange);
   border: none;
   font-weight: 700;
+  border-radius: 4px; /* Adding border radius here since we remove it from li */
 }
 
-.login-btn a:hover {
+.login-btn > a:hover {
   background-color: #d96310;
 }
 
